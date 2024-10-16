@@ -18,7 +18,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// app.use('/api')
+// app.use('/api/patients')
+// app.use('/api/auth-requests')
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res
