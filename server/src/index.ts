@@ -1,6 +1,6 @@
 require("dotenv").config();
-const connectDatabase = require("./db/index");
-
+import app from "./app";
+import connectDatabase from "./db";
 
 (async () => {
   try {
@@ -9,6 +9,7 @@ const connectDatabase = require("./db/index");
         "MongoDB connection string not provided in environment variables"
       );
     }
+    app;
     await connectDatabase();
   } catch (error) {
     console.info(error);

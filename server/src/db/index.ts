@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const connectDB = async () => {
+export default async () => {
   try {
     const mongoUrl = process.env.MONGO_URI;
     if (!mongoUrl) {
@@ -28,4 +28,3 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
